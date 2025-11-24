@@ -1,5 +1,5 @@
 
-# FastAPI Place APIs (Rahul Shetty Academy compatible)
+# FastAPI Place APIs (compatible)
 
 This project implements the 4 Place APIs using **FastAPI**, with the exact same request/response structure
 (and the same API key `qaclick123`) as the document you provided.
