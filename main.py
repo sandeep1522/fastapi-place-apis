@@ -5,7 +5,7 @@ import uuid
 import json
 import os
 
-app = FastAPI(title="Place APIs (RahulShettyAcademy compatible)")
+app = FastAPI(title="Place APIs (SandeepYadav compatible)")
 
 DB_FILE = os.path.join(os.path.dirname(__file__), "database.json")
 EXPECTED_KEY = "qaclick123"
