@@ -1,0 +1,139 @@
+{
+  "info": {
+    "name": "Place APIs - sandeepyadavacademy (FastAPI)",
+    "_postman_id": "c0a1b2c3-d4e5-6789-0000-111213141516",
+    "description": "Collection for the 4 Place APIs (Add/Get/Update/Delete). Replace {{base_url}} with your deployed host.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Place",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/maps/api/place/add/json?key=qaclick123",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "maps",
+            "api",
+            "place",
+            "add",
+            "json"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "qaclick123"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"location\": {\n    \"lat\": -38.383494,\n    \"lng\": 33.427362\n  },\n  \"accuracy\": 50,\n  \"name\": \"Frontline house\",\n  \"phone_number\": \"(+91) 983 893 3937\",\n  \"address\": \"29, side layout, cohen 09\",\n  \"types\": [\n    \"shoe park\",\n    \"shop\"\n  ],\n  \"website\": \"http://google.com\",\n  \"language\": \"French-IN\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get Place",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/maps/api/place/get/json?place_id={{place_id}}&key=qaclick123",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "maps",
+            "api",
+            "place",
+            "get",
+            "json"
+          ],
+          "query": [
+            {
+              "key": "place_id",
+              "value": "{{place_id}}"
+            },
+            {
+              "key": "key",
+              "value": "qaclick123"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Place",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/maps/api/place/update/json",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "maps",
+            "api",
+            "place",
+            "update",
+            "json"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"place_id\": \"{{place_id}}\",\n  \"address\": \"70 Summer walk, USA\",\n  \"key\": \"qaclick123\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Place",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/maps/api/place/delete/json?key=qaclick123",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "maps",
+            "api",
+            "place",
+            "delete",
+            "json"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "qaclick123"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"place_id\": \"{{place_id}}\"\n}"
+        }
+      }
+    }
+  ]
+}
